@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Excel from './components/Excel';
 
@@ -11,9 +12,13 @@ class App extends Component {
                 ["zebra", "Messi", "Spanish", "100-200", "1000 million"]
             ];
         return (
-            <div>
-                <Excel headers={headers} data={data} />
-            </div>
+            <BrowserRouter>
+                <div>
+                    <Switch>
+                        <Route exact path="/" render={(props) => <Excel data={data} headers={headers} {...props}/>} />
+                    </Switch>
+                </div>
+            </BrowserRouter>
         );
     }
 }
