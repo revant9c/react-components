@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Excel from './components/Excel';
+import AllComponents from "./components/AllComponents";
+import Excel from "./components/Excel";
 
 class App extends Component {
     render() {
@@ -15,7 +16,8 @@ class App extends Component {
             <BrowserRouter>
                 <div>
                     <Switch>
-                        <Route exact path="/" render={(props) => <Excel data={data} headers={headers} {...props}/>} />
+                        <Route exact path="/" component={AllComponents} />
+                        <Route exact path="/excel" render={(props) => <Excel data={data} headers={headers} {...props}/>} />
                     </Switch>
                 </div>
             </BrowserRouter>
