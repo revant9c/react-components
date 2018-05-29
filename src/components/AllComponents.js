@@ -11,6 +11,11 @@ function AllComponents () {
                         Excel Table
                     </Link>
                 </li>
+                <li>
+                    <Link to='/button'>
+                       Button
+                    </Link>
+                </li>
             </ul>
         </div>
     )

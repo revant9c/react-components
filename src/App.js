@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import AllComponents from "./components/AllComponents";
 import Excel from "./components/Excel";
+import Button from "./components/Button";
 
 class App extends Component {
     render() {
@@ -18,6 +19,7 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" component={AllComponents} />
                         <Route exact path="/excel" render={(props) => <Excel data={data} headers={headers} {...props}/>} />
+                        <Route exact path="/button" render={(props) => <Button text='Submit' {...props}/>} />
                     </Switch>
                 </div>
             </BrowserRouter>
